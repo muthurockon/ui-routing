@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- CSS (load bootstrap) -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    
+    <style>
+        .navbar { border-radius:0; }
+        .vertical-menu {
+    width: 200px;
+
+   display:block;
+    float: left;
+}
+
+.vertical-menu a {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #4CAF50;
+    color: green;
+}
+.c{
+
+  display:block;
+    float: right;
+}
+    </style>
+
+    <!-- JS (load angular, ui-router, and our custom js file) -->
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="app.js"></script>
+        <script src="script.js"></script>
+</head>
+
+<!-- apply our angular app to our site -->
+<body ng-app="myApp">
+
+<!-- NAVIGATION -->
+
+<span class="vertical-menu" >
+  <a href="#" active>Home</a>
+  <a ui-sref="first">FirstOne</a>
+  <a ui-sref='second'>Second One</a>
+  <a ui-sref='third'>Third One</a>
+  <a ui-sref='fourth'>Fourth One</a>
+  <a ui-sref='FIFTH'>Fifth One</a> 
+ 
+</span>
+
+<span class="c" ui-view></span>
+
+<!-- MAIN CONTENT -->
+<!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+
+
+
+
+</body>
+</html>
